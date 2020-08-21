@@ -2,47 +2,52 @@
 <html lang="en">
 
 <head>
-    <!-- )======<{CSS Link}>======( -->
-    <link rel="stylesheet" type="text/css" href="./CSS/Style.css">
+    <!-- )======<o8{CSS Link}8o>======( -->
+    <link rel="stylesheet" type="text/css" href="./CSS/Style.css" />
     <!-- )======<{BOX ICONS}>======( -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio website complete</title>
 </head>
 
 <body>
     <!-- )======<{NavBar}>======( -->
+    <h1 class="class1 class2"></h1>
     <header class="NavBar__Header">
-        <nav class="NavBar__Grid Nav">
+        <nav class="Nav NavBar__Grid">
             <div>
-                <a class="NavBar__Logo" href="#">Abdallah</a>
+                <a href="#" class="NavBar__Logo">Abdallah</a>
+            </div>
+
+            <div class="NavBar__Menu" id="NavBar__Menu">
+                <ul class="NavBar__List">
+                    <li class="NavBar__Item">
+                        <a href="#home" class="NavBar__Link Active">Home</a>
+                    </li>
+                    <li class="NavBar__Item">
+                        <a href="#about" class="NavBar__Link">About</a>
+                    </li>
+                    <li class="NavBar__Item">
+                        <a href="#skills" class="NavBar__Link">Skills</a>
+                    </li>
+                    <li class="NavBar__Item">
+                        <a href="#work" class="NavBar__Link">Work</a>
+                    </li>
+                    <li class="NavBar__Item">
+                        <a href="#contact" class="NavBar__Link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="NavBar__Toggle" id="NavBar__Toggle">
+                <i class="bx bx-menu"></i>
             </div>
         </nav>
-        <div class="NavBar__Menu" id="NavBar__Menu">
-            <ul>
-                <li class="NavBar__Item">
-                    <a href="#home" class="NavBar__Link">Home</a>
-                </li>
-                <li class="NavBar__Item">
-                    <a href="#about" class="NavBar__Link">About</a>
-                </li>
-                <li class="NavBar__Item">
-                    <a href="#skills" class="NavBar__Link">Skills</a>
-                </li>
-                <li class="NavBar__Item">
-                    <a href="#work" class="NavBar__Link">Work</a>
-                </li>
-                <li class="NavBar__Item">
-                    <a href="#contact" class="NavBar__Link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="nav__toggle" id="nav-toggle">
-            <i class='bx bx-menu'></i>
-        </div>
     </header>
+
+    <script src="./JS/code.js"></script>
 </body>
 
 </html>

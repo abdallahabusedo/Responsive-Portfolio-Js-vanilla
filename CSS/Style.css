@@ -2,72 +2,227 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
-
-
-/* )======<{GOOGLE FONTS}>======( */
+/* )======<{VARIABLES CSS}>======( */
 
 :root {
-    --header-height: 3rem;
-    --font-semi: 600;
+    --Header-Height: 3rem;
+    --Font-Weight: 600;
 }
 
 
-/*===== Colorers =====*/
-
-
-/* )======<{GOOGLE FONTS}>======( */
+/* )======<{Colorers}>======( */
 
 :root {
-    --first-color: #a640f4;
-    --second-color: #260e31;
+    --First-Color: #a640f4;
+    --Second-Color: #260e31;
 }
 
 
-/*===== Fuente y tipografia =====*/
-
-
-/* )======<{GOOGLE FONTS}>======( */
+/* )======<{Fuentes tipografia}>======( */
 
 :root {
-    --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
+    --Body-Font: 'Poppins', sans-serif;
+    --Big-Font-Size: 2rem;
+    --H2-Font-Size: 1.25rem;
+    --Normal-Font-Size: 0.938rem;
 }
 
 @media screen and (min-width: 768px) {
      :root {
-        --big-font-size: 3.5rem;
-        --h2-font-size: 2rem;
-        --normal-font-size: 1rem;
+        --Big-Font-Size: 3.5rem;
+        --H2-Font-Size: 2rem;
+        --Normal-Font-Size: 1rem;
     }
 }
 
 
-/*===== Margenes =====*/
-
-
-/* )======<{GOOGLE FONTS}>======( */
+/* )======<{Margin}>======( */
 
 :root {
-    --mb-1: 0.5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
+    --Mb-1: 0.5rem;
+    --Mb-2: 1rem;
+    --Mb-3: 1.5rem;
+    --Mb-4: 2rem;
+    --Mb-5: 2.5rem;
+    --Mb-6: 3rem;
 }
 
 
-/*===== z index =====*/
-
-
-/* )======<{GOOGLE FONTS}>======( */
+/* )======<{z index}>======( */
 
 :root {
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
+    --Z-Back: -10;
+    --Z-Normal: 1;
+    --Z-Tooltip: 10;
+    --Z-Fixed: 100;
+}
+
+
+/* )======<{Base}>======( */
+
+*,
+::before,
+::after {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--Header-Height) 0px 0px 0px;
+    font-family: var(--Body-Font);
+    font-size: var(--Normal-Font-Size);
+    color: var(--Second-Color);
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* )======<{Layouts}>======( */
+
+.NavBar__Header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--Z-Fixed);
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
+}
+
+.NavBar__Grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--Mb-2);
+    margin-right: var(--Mb-2);
+}
+
+
+/* )======<{NavBar}>======( */
+
+.Nav {
+    height: var(--Header-Height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--Font-Weight);
+}
+
+@media screen and (max-width: 768px) {
+    .NavBar__Menu {
+        position: fixed;
+        top: var(--Header-Height);
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--Second-Color);
+        transition: 0.5s;
+    }
+}
+
+.NavBar__Item {
+    margin-bottom: var(--Mb-4);
+}
+
+.NavBar__Link {
+    position: relative;
+    color: #fff;
+}
+
+.NavBar__Link:hover {
+    position: relative;
+}
+
+.NavBar__Link:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--First-Color);
+}
+
+.NavBar__Logo {
+    color: var(--Second-Color);
+}
+
+.NavBar__Toggle {
+    color: var(--Second-Color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.Active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--First-Color);
+}
+
+.Show {
+    right: 0;
+}
+
+
+/* )======<{MEDIA QUERIES}>======( */
+
+@media screen and (min-width:768px) {
+    body {
+        margin: 0;
+    }
+    .Nav {
+        height: calc(var(--Header-Height) + 1rem);
+    }
+    .NavBar__List {
+        display: flex;
+        padding-top: 0;
+    }
+    .NavBar__Item {
+        margin-left: var(--Mb-6);
+        margin-bottom: 0;
+    }
+    .NavBar__Toggle {
+        display: none;
+    }
+    .NavBar__Link {
+        color: var(--second-color);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .NavBar__Grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
