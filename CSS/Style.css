@@ -1,0 +1,73 @@
+/* )======<{GOOGLE FONTS}>======( */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+
+
+/* )======<{GOOGLE FONTS}>======( */
+
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+}
+
+
+/*===== Colorers =====*/
+
+
+/* )======<{GOOGLE FONTS}>======( */
+
+:root {
+    --first-color: #a640f4;
+    --second-color: #260e31;
+}
+
+
+/*===== Fuente y tipografia =====*/
+
+
+/* )======<{GOOGLE FONTS}>======( */
+
+:root {
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+     :root {
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+
+/*===== Margenes =====*/
+
+
+/* )======<{GOOGLE FONTS}>======( */
+
+:root {
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+}
+
+
+/*===== z index =====*/
+
+
+/* )======<{GOOGLE FONTS}>======( */
+
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
