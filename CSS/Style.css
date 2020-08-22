@@ -303,6 +303,71 @@ img {
 }
 
 
+/*)======<o8{Skills}8o>======(*/
+
+.Skills__Container {
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.Skills__Subtitle {
+    margin-bottom: var(--Mb-2);
+}
+
+.Skills__Data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--Font-Weight);
+    padding: 0.5rem 1rem;
+    margin-bottom: var(--Mb-4);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 2px rgba(14, 36, 49, 0.15);
+}
+
+.Skills__Icons {
+    font-size: 2rem;
+    margin-right: var(--Mb-2);
+    color: var(--First-Color);
+}
+
+.Skills__Names {
+    display: flex;
+    align-items: center;
+}
+
+.Skills__Bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--First-Color);
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    z-index: var(--Z-Back);
+}
+
+.Skills__HTML {
+    width: 95%;
+}
+
+.Skills__CSS {
+    width: 70%;
+}
+
+.Skills__JS {
+    width: 65%;
+}
+
+.Skills__UIX {
+    width: 50%;
+}
+
+.Skills__IMG {
+    border-radius: 0.5rem;
+}
+
+
 /* )======<{MEDIA QUERIES}>======( */
 
 @media screen and (max-width:400px) {
@@ -353,7 +418,8 @@ img {
         width: 340px;
         top: 30%;
     }
-    .About__Container {
+    .About__Container,
+    .Skills__Container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: initial;
