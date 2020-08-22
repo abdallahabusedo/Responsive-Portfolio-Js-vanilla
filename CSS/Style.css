@@ -101,6 +101,35 @@ img {
 }
 
 
+/*)======<o8{Sections}8o>======(*/
+
+.Section__Title {
+    position: relative;
+    font-size: var(--H2-Font-Size);
+    color: var(--First-Color);
+    margin-top: var(--Mb-2);
+    margin-bottom: var(--Mb-4);
+    text-align: center;
+}
+
+.Section__Title::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3rem;
+    background-color: var(--First-Color);
+}
+
+.Section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+
 /* )======<{Layouts}>======( */
 
 .NavBar__Header {
@@ -233,8 +262,8 @@ img {
 .Home__img {
     position: absolute;
     right: 15px;
-    bottom: 0;
-    width: 240px;
+    top: 50%;
+    width: 220px;
 }
 
 .Home__Button__Contact {
@@ -253,7 +282,35 @@ img {
 }
 
 
+/*)======<o8{About}8o>======(*/
+
+.About__Container {
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.About__Subtitle {
+    margin-bottom: var(--Mb-2);
+}
+
+.About__Image {
+    justify-self: center;
+}
+
+.About__Image img {
+    width: 200px;
+    border-radius: 1rem;
+}
+
+
 /* )======<{MEDIA QUERIES}>======( */
+
+@media screen and (max-width:400px) {
+    .Home__img {
+        width: 220px;
+        top: 50%;
+    }
+}
 
 @media screen and (min-width:768px) {
     body {
@@ -293,8 +350,16 @@ img {
         margin-right: var(--Mb-4);
     }
     .Home__img {
-        width: 407px;
-        bottom: 35%;
+        width: 340px;
+        top: 30%;
+    }
+    .About__Container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+    .About__Image img {
+        width: 300px;
     }
 }
 
