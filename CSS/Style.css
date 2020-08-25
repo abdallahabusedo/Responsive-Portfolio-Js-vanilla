@@ -95,7 +95,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -260,10 +260,10 @@ img {
 }
 
 .Home__img {
+    min-width: 220px !important;
     position: absolute;
     right: 15px;
     top: 50%;
-    width: 220px;
 }
 
 .Home__Button__Contact {
